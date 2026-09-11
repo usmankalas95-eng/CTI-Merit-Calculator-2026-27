@@ -180,8 +180,8 @@ if st.button("Calculate Final Merit Score", type="primary", use_container_width=
             base_score = (bs_pct / 100.0) * 40.0
             acad_total = matric_score + inter_score + base_score
         else:
-            ba_score = (ba_pct / 100.0) * 10.0
-            ma_score = (ma_pct / 100.0) * 30.0
+            ba_score = (ba_pct / 100.0) * 15.0
+            ma_score = (ma_pct / 100.0) * 25.0
             acad_total = matric_score + inter_score + ba_score + ma_score
 
         if higher_qual == "Ph.D.":
@@ -203,8 +203,8 @@ if st.button("Calculate Final Merit Score", type="primary", use_container_width=
             max_bs = 50.0 if college_type == "Associate College" else 40.0
             st.write(f"• **BS (4-Yr) Score:** {base_score:.3f} / {max_bs:.0f}")
         else:
-            max_ba = 15.0 if college_type == "Associate College" else 10.0
-            max_ma = 35.0 if college_type == "Associate College" else 30.0
+            max_ba = 15.0 if college_type == "Associate College" else 15.0
+            max_ma = 35.0 if college_type == "Associate College" else 25.0
             st.write(f"• **BA/BSc Score:** {ba_score:.3f} / {max_ba:.0f}")
             st.write(f"• **MA/MSc Score:** {ma_score:.3f} / {max_ma:.0f}")
             
